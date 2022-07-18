@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    /* Primary */
+    --sedans-color: hsl(31, 77%, 52%);
+    --suvs-color: hsl(184, 100%, 22%);
+    --luxury-color: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Headings, paragraphs and links */
+html {
+    font-size: 10px;
+}
+
+
+body {
+    font-size: 1.5rem;
+    margin: 1.2em;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3.8rem;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5em;
+}
+
+a {
+    display: inline-block;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: hsla(0, 0%, 100%, 95%);
+    border: 2px solid hsla(0, 0%, 100%, 95%);
+    border-radius: 22px;
+    text-decoration: none;
+    text-align: center;
+    width: 10em;
+    margin-top: 1.5em;
+    padding: 0.6em;
+}
+
+.sedans a:link, .sedans a:visited {
+    color: var(--sedans-color);
+}
+
+.sedans a:hover {
+    background-color: var(--sedans-color);
+    color: var(--transparent-white);
+}
+
+.suvs a:link, .suvs a:visited {
+    color: var(--suvs-color);
+}
+
+.suvs a:hover {
+    background-color: var(--suvs-color);
+    color: var(--transparent-white);
+}
+
+.luxury a:link, .luxury a:visited {
+    color: var(--luxury-color);
+}
+
+.luxury a:hover {
+    background-color: var(--luxury-color);
+    color: var(--transparent-white);
+}
+
+/* Preview card */
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+section {
+    padding: 7rem;
+}
+
+.sedans {
+    background-color: var(--sedans-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0 10px 10px;
+}
+
+@media screen and (min-width: 900px) {
+    
+    main {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .sedans {
+        border-radius: 10px 0 0 10px ;
+    }
+
+    .luxury {
+        border-radius: 0 10px 10px 0;
+    }
+
+}
